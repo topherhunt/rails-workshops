@@ -24,7 +24,7 @@ $ rails new blog
   Bundle complete! 18 Gemfile dependencies, 78 gems now installed.
 ```
 
-To make Rails work inside Vagrant, open `config/environments/development.rb` and edit the last few lines as follows:
+To make Rails work inside Vagrant, open `config/environments/development.rb` in your text editor, and edit the last few lines as follows:
 
 ```ruby
 # <<<REPLACE THIS:>>>

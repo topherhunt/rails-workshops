@@ -11,3 +11,7 @@ It will probably contain:
     - Git & Github cheatsheet
     - Heroku deployment cheatsheet
   - Guides (ie. each course module)
+
+Deployed using Github Pages.
+
+  * https://nicolas-van.github.io/easy-markdown-to-github-pages/
