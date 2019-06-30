@@ -34,6 +34,12 @@ TODO: Link to more info about controllers
 
 ### Models, database, ActiveRecord
 
+Some important concepts for how Rails works with data:
+
+  * **Model**: A Model is some resource, some type of thing, that a Rails app can create, store in its database, and display information about. Each Model should be thoughtfully named to describe the concept that it's representing. For example a Rails app for an online store might have models for `Customer`, `Merchandise`, and `Invoice`. Rails uses an amazing library called **ActiveRecord** to give you easy ways to work with your models.
+  * **CRUD**: Functionality / pages to read & write a resource is often referred to as **CRUD operations**: **C**reate, **R**ead, **U**pdate, **D**elete. A common pattern is to have one Rails controller containing all of the CRUD actions for a particular resource / model.
+  * **REST**: REST is a philosophy for how to organize your app's routes (URLs, paths) into "RESTful resources". Basically, this means grouping all of a resource's CRUD operations together into one controller using a standard pattern. [See here for more about REST.](https://www.sitepoint.com/restful-rails-part-i/)
+
 
 ### HTTP request lifecycle, params
 
