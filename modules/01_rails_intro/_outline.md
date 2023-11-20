@@ -5,121 +5,59 @@ This module will introduce you to all the basic concepts in Rails web developmen
 
 ## Requirements
 
-Skills:
+  * If you aren't familiar with how web servers / HTTP / the internet works, skim this article (pages 1 - 7): https://computer.howstuffworks.com/web-server.htm
 
-  * If you haven't done web development before, [read this article TODO](TODO) so you have a basic understanding of how a website works: HTML, webpages, servers, browsers, HTTP requests, server-side languages, databases.
-    - TODO: Is there a good, straightforward article that breaks this down? If I can't find one, write my own and include it here.
+  * If you aren't familiar with HTML, skim this article: https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started
 
-  * If you aren't familiar with HTML, [read this HTML cheatsheet](TODO) so you have a basic sense of what HTML looks like and how it works.
-
-  * If you aren't familiar with Ruby, [read this Ruby cheatsheet](TODO) so you have a basic sense of what Ruby looks like and how it works. You don't need to memorize anything, just get a basic feel for it.
+  * We'll write Ruby code during this workshop. You don't need to learn Ruby beforehand, but skim through https://www.vikingcodeschool.com/professional-development-with-ruby/ruby-cheat-sheet so that you can at least recognize some of the common patterns in how Ruby is written.
 
   * No Rails experience is required.
 
-Setup steps:
+  * IMPORTANT: At least **2 days** before the workshop: Make sure your Vagrant environment is installed and working properly by carefully following [these setup steps](/help/working_with_vagrant.md). **If you don't have Vagrant set up properly, you can't participate in the workshop!** If you run into trouble, please email me (hunt DOT topher AT gmail DOT com) and I'll gladly help you out.
 
-  * **IMPORTANT**: At least **2 days** before the workshop: Make sure your Vagrant environment is installed and working properly by carefully following [these setup steps](/help/working_with_vagrant.md). **If you don't have Vagrant set up properly, you can't participate in these workshops!** If you run into trouble, please email me (hunt DOT topher AT gmail DOT com) and I'll gladly help you out.
-
-  * Make sure you have a decent code editor. Almost any plain-text editor will work. My favorites are [Sublime Text](TODO) or [Github Atom](TODO).
-
-  * _Bring an answer to this question:_ If you had all the skills and all the time you needed, what is one web application that you would love to build? Describe it. What problem would this app solve? What "need" would it fulfill in the world?
+  * Make sure you have a decent code editor. Almost any plain-text editor will work. My favorites are [Sublime Text](https://www.sublimetext.com) or [VS Code](https://code.visualstudio.com). Both are free.
 
 
-## Lecture: How these workshops will work
+## Presentation part 1
 
-Link to a pres
+TODO: link to the slides.
 
-Topic ideas:
+Will cover:
 
-  Who I am
-  why I'm doing this
-  my goals
-  Join the Slack channel for questions / help / just chatting on anything related to these workshops
-
-
-## Lecture: What is Ruby? What is Rails?
-
-Rough topic ideas:
-
-What is Ruby?
-What is Rails?
-
-Why learn Rails instead of working with another framework that you might be more familiar with?
-Alternative languages & frameworks. Why so many?
-How Rails fits into the broader context of the internet
-
-Platform differences, installation hell, and our Vagrant setup
+  - about me
+  - what is Ruby, what is Rails
+  - why learn Rails
+  - goals for today
+  - Today's exercise: whirlwind wour through a simple Rails app
 
 
+## Exercise: Build a simple Rails app (whirlwind tour, no explanations!)
+
+We'll start learning Rails by plunging straight in and building a simple app. I'm not going to explain anything yet; just follow each step exactly and observe how the code looks and feels as you're writing it. If you've written everything correctly, at the end you'll have a simple, but complete and deployable, Rails application.
+
+Then we'll go through and learn about each of the pieces we wrote.
+
+[Clone the official Rails intro guide, but strip out all the explanations and consolidate some steps, so it's simply following instructions. https://guides.rubyonrails.org/getting_started.html]
 
 
-## Exercise: Build a simple Rails application (part 1)
+## Presentation part 2
 
-TODO: Incorporate the official Rails guide, with a couple caveats.
+Will cover:
 
-Idea: Maybe make a copy of the official guide HTML, so I can break it into 2+ chunks. But be clear about the fact that I'm wholesale copying it, and link to the orig.
-
-The old snippet:
-
------------
-
-In this exercise, you'll build mostly another copy of the same app you built in [Exercise 01](TODO), but this time you'll follow [the official Rails beginner's guide](https://guides.rubyonrails.org/getting_started.html) which contains thorough, detailed explanations of each concept and how it fits into the big picture of Rails.
-
-Open [the official Rails beginner's guide](https://guides.rubyonrails.org/getting_started.html) and follow all steps to build out your web app. Carefully read the explanations along the way. Make note of anything you found confusing or any questions you have.
-
-Good luck!
-
-**Important note: Configure the app to work in Vagrant**
-
-To make Rails work inside Vagrant, you'll need to do one extra step after running the `rails new` command. Open `config/environments/development.rb` and edit the last few lines as follows:
-
-```ruby
-# <<<REPLACE THIS:>>>
-  # Use an evented file watcher to asynchronously detect changes in source code,
-  # routes, locales, etc. This feature depends on the listen gem.
-  config.file_watcher = ActiveSupport::EventedFileUpdateChecker
-
-# <<<WITH THIS:>>>
-  # Need to use a different file update polling strategy because we're in Vagrant
-  # Thanks to https://stackoverflow.com/a/36616931/1729692
-  config.file_watcher = ActiveSupport::FileUpdateChecker
-```
-
------------
-
-
-## Lecture & discussion: What was all that?
-
-Link to a presentation document. G Slides? Markdown-to-slides?
+  - some of the pieces of Rails you've seen today
+  - what we can cover next time
+  - how to keep learning
+  - invite to join our Slack community
 
 Possible topic ideas:
   How Rails works (basic request lifecycle diagram)
     server is just a computer that waits for an HTTP request, and sends it to your Rails application
     Rails application is just a program that's running on the server, that's waiting for an HTTP request
-    postgres: database where most of the app's state is stored
+    postgres: database where most of the app's data is stored
   Rails internals / lifecycle of a request
     router
     controller
     maybe read from / write to the database
     send back a HTML response
 
-Review the important pieces we just touched
 
-Show all of the most important terms & concepts together on one page / diagram
-
-
-## Exercise: Build a simple Rails app (part 2)
-
-
-
-
-
-
-
-
-
-TODO: The targeted broad outline:
-
-  Intro lectures & setting the context
-  Students dive in and follow copypasta instructions to build out their first Rails app.
-  Lectures & discussion: What was all of that? All the pieces involved in a Rails app
